@@ -1,0 +1,51 @@
+<body>
+	<div class="ui container">
+		<h2 class="ui block header">Agenda Kegiatan</h2>
+
+		<div class="ui container segment">
+			<form class="ui form form-kegiatan">
+				<div class="three fields">
+					<div class="field">
+						<label>Nama Kegiatan</label>
+						<input type="text" name="nama_kegiatan" class="form-text form-control" placeholder="Nama kegiatan">
+					</div>
+					<div class="field">
+						<label>Tanggal Kegiatan</label>
+						<input type="text" name="tgl_kegiatan" class="form-text form-control" placeholder="Tanggal kegiatan">
+					</div>
+					<div class="field">
+						<label>Lokasi kegiatan</label>
+						<input type="text" name="lokasi_kegiatan" class="form-text form-control" placeholder="Lokasi kegiatan">
+					</div>
+				</div>
+				<input type="hidden" name="_id">
+			</form>
+
+			<table class="ui called table">
+				<thead>
+					<tr>
+						<th class="ten wide">Nama Kegiatan</th>
+						<th>Tanggal</th>
+						<th>Lokasi</th>
+						<th class="one wide"> </th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each agenda}}
+						{{> data}}
+					{{/each}}
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+</body>
+
+<template name="data">
+	<tr>
+		<td><a class="edit-button" data-id="{{_id}}" href="#">{{kegiatan}}</a></td>
+		<td>{{tgl}}</td>
+		<td>{{lokasi}}</td>
+		<td><button class="ui icon button delete">x</button></td>
+	</tr>
+</template>

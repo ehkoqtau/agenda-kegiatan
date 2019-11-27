@@ -1,0 +1,72 @@
+body {
+  margin: 0; padding: 0;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  position: absolute;
+  min-height: 100%;
+  font-family: Helvetica, sans-serif, Arial;
+  background: #777;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 600px;
+  background: #ccc;
+  height: 100%;
+}
+
+.header {
+  text-align: center;
+  background: linear-gradient(180deg, #555, #999);
+  margin: 0;
+  color: #fff;
+  padding: 20px;
+}
+
+.field {
+  clear: both;
+}
+
+.field label {
+  padding: 5px;
+  display: block;
+  float: left;
+  width: 24%;
+}
+
+.field input {
+  padding: 5px;
+  display: block;
+  float: right;
+  width: 72%;
+  font-size: 1.1em;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.celled thead tr th {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  background: linear-gradient(180deg, #555, #999);
+  margin: 0;
+  color: #fff;
+}
+
+.celled tbody tr td {
+  margin: 0;
+  padding: 9px;
+  border-bottom: 1px solid #777;
+}
+
+.button {
+	display: inline-block;
+	width: 25px;
+	font-size: 1.2em;
+	height: 25px;
+}
